@@ -29,23 +29,29 @@ function Index() {
     };
   }, []);
 
+  const addSectionRef = (ref) => {
+    if (ref && !sectionsRef.current.includes(ref)) {
+      sectionsRef.current.push(ref);
+    }
+  };
+
   return (
     <div className="m-auto max-w-4xl bg-neutral-100 p-4 dark:bg-neutral-900">
-      <section ref={(e) => sectionsRef.current.push(e)}>
+      <section ref={addSectionRef}>
         <h1 className="text-primary my-4 text-xl">
           <span aria-hidden="true">&#x2023;</span>
           Skills
         </h1>
         <Skills />
       </section>
-      <section ref={(e) => sectionsRef.current.push(e)}>
+      <section ref={addSectionRef}>
         <h1 className="text-primary my-4 text-xl">
           <span aria-hidden="true">&#x2023;</span>
           Projects
         </h1>
         <Projects />
       </section>
-      <section ref={(e) => sectionsRef.current.push(e)}>
+      <section ref={addSectionRef}>
         <h1 className="text-primary my-4 text-xl">
           <span aria-hidden="true">&#x2023;</span>
           Contact
