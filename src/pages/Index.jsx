@@ -1,12 +1,57 @@
-import React from 'react';
-import Introduction from '../components/Introduction';
+import React, { useEffect, useRef } from 'react';
+import Skills from '../components/Skills';
 import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 function Index() {
+  const sectionsRef = useRef([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      sectionsRef.current.forEach((el) => {
+        const { top, bottom, height } = el.getBoundingClientRect();
+        const windowHeight =
+          window.innerHeight || document.documentElement.clientHeight;
+
+        const percentVisible =
+          Math.max(0, Math.min(bottom, windowHeight) - Math.max(top, 0)) /
+          height;
+
+        const opacity = percentVisible >= 0.5 ? 1 : percentVisible * 2;
+        /* eslint-disable-next-line no-param-reassign */
+        el.style.opacity = opacity.toFixed(2);
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
-      <Introduction />
-      <Projects />
+    <div className="m-auto max-w-4xl bg-neutral-100 p-4 dark:bg-neutral-900">
+      <section ref={(e) => sectionsRef.current.push(e)}>
+        <h1 className="text-primary my-4 text-xl">
+          <span aria-hidden="true">&#x2023;</span>
+          Skills
+        </h1>
+        <Skills />
+      </section>
+      <section ref={(e) => sectionsRef.current.push(e)}>
+        <h1 className="text-primary my-4 text-xl">
+          <span aria-hidden="true">&#x2023;</span>
+          Projects
+        </h1>
+        <Projects />
+      </section>
+      <section ref={(e) => sectionsRef.current.push(e)}>
+        <h1 className="text-primary my-4 text-xl">
+          <span aria-hidden="true">&#x2023;</span>
+          Contact
+        </h1>
+        <Contact />
+      </section>
     </div>
   );
 }
