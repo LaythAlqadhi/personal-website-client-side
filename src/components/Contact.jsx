@@ -13,7 +13,7 @@ function Contact() {
     e.preventDefault();
 
     axios
-      .post(`${API_URL}/messages`, inputs)
+      .post(`${API_URL}/email`, inputs)
       .then((res) => {
         if (res.status >= 400) {
           throw new Error('Server Error.');
