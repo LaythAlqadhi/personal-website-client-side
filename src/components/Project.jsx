@@ -1,24 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-function Project() {
+function Project({ title, desc, viewCode, livePreview, imgSrc }) {
   return (
-    <div className="flex flex-col md:flex-row gap-4">
-      <div className="w-64 h-40 bg-sky-500 border border-neutral-900 dark:border-neutral-100"></div>
-      <div className="w-64 h-40 flex flex-col gap-4">
+    <div className="flex w-full flex-col gap-4 md:flex-row">
+      <img
+        className="w-full border border-dotted border-neutral-900 md:h-64 md:w-96 dark:border-neutral-100"
+        src={imgSrc}
+        alt=""
+        loading="lasy"
+      />
+      <div className="items-between flex w-full flex-col justify-between gap-4 md:h-64 md:w-96">
         <div>
-          <h1 className="font-bold">Consectetur adipiscing elit</h1>
-          <p className="hyphens-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-          </p>
+          <h2 className="text-primary">{title}</h2>
+          <p className="text-secondary hyphens-auto">{desc}</p>
         </div>
-        <div className="flex justify-between items-center">
-          <Link className="button">View code</Link>
-          <Link className="button">Live preview</Link>
+        <div className="flex items-center justify-between">
+          <a href={viewCode} className="button">
+            View code
+          </a>
+          <a href={livePreview} className="button">
+            Live preview
+          </a>
         </div>
       </div>
     </div>
   );
 }
+
+Project.propTypes = {
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  viewCode: PropTypes.string.isRequired,
+  livePreview: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+};
 
 export default Project;
