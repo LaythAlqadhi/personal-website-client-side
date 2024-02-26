@@ -33,6 +33,7 @@ function Contact() {
         <a
           className="group"
           href="https://www.linkedin.com/in/laythalqadhi"
+          target="_blank"
           aria-label="LinkedIn"
         >
           <LinkedinIcon className="transform-all fill-neutral-900 duration-500 group-hover:fill-yellow-600 dark:fill-neutral-100" />
@@ -40,6 +41,7 @@ function Contact() {
         <a
           className="group"
           href="https://github.com/LaythAlqadhi"
+          target="_blank"
           aria-label="GitHub"
         >
           <GithubIcon className="transform-all fill-neutral-900 duration-500 group-hover:fill-yellow-600 dark:fill-neutral-100" />

@@ -13,6 +13,7 @@ function Layout({ children }) {
         <a
           className="text-secondary hover:text-yellow-600"
           href="https://github.com/LaythAlqadhi"
+          target="_blank"
         >
           Layth Alqadhi © {new Date().getFullYear()}
         </a>
@@ -20,6 +21,7 @@ function Layout({ children }) {
         <a
           className="text-secondary hover:text-yellow-600"
           href="https://github.com/LaythAlqadhi/personal-website-client-side"
+          target="_blank"
         >
           My portfolio is open source
         </a>

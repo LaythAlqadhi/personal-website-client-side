@@ -16,10 +16,10 @@ function Project({ title, desc, viewCode, livePreview, imgSrc }) {
           <p className="text-secondary hyphens-auto">{desc}</p>
         </div>
         <div className="flex items-center justify-between">
-          <a href={viewCode} className="button">
+          <a className="button" href={viewCode} target="_blank">
             View code
           </a>
-          <a href={livePreview} className="button">
+          <a className="button" href={livePreview} target="_blank">
             Live preview
           </a>
         </div>
