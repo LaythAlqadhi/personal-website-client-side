@@ -9,14 +9,14 @@ function Projects() {
     <div className="flex w-full flex-col items-center justify-center gap-8 p-4">
       <Project
         title="Odinbook"
-        desc="A MERN stack social media platform styled with Tailwind CSS. Users sign in via GitHub, create/share posts, like/comment, and follow others. It includes authentication, home, search, profile, and follow request pages, with immediate input validation."
+        desc="A MERN stack social media platform styled with Tailwind CSS. Users sign in via GitHub, create/share posts, like/comment, and follow others. It includes authentication, home, search, profile, and follow request pages."
         viewCode="https://github.com/LaythAlqadhi/odin-book-client-side"
         livePreview="https://odinbook-eight.vercel.app"
         imgSrc={odinbookImg}
       />
       <Project
         title="Messging App"
-        desc="A MERN stack messaging platform styled with Tailwind CSS. Users authenticate to access private chat rooms, send/receive messages, and add others by username. It includes authentication, chat, initial, and not found pages, with immediate input validation."
+        desc="A MERN stack messaging platform styled with Tailwind CSS. Users authenticate to access private chat rooms, send/receive messages, and add others by username. It includes authentication, chat, initial, and not found pages."
         viewCode="https://github.com/LaythAlqadhi/messaging-app-client-side"
         livePreview="https://messaging-app-three.vercel.app"
         imgSrc={messagingAppImg}
