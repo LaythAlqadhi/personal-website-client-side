@@ -25,7 +25,7 @@ function Introduction() {
         className="text-secondary text-lg opacity-0 transition-opacity delay-700 duration-1000"
         ref={(e) => elementsRef.current.push(e)}
       >
-        Full-stack web developer
+        Full Stack Web Developer
       </span>
       <span
         className="material-symbols-outlined text-secondary animate-bounce text-4xl opacity-0 transition-opacity delay-[1400ms] duration-1000"

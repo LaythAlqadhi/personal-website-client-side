@@ -35,6 +35,7 @@ function Contact() {
           href="https://www.linkedin.com/in/laythalqadhi"
           target="_blank"
           aria-label="LinkedIn"
+          rel="noreferrer"
         >
           <LinkedinIcon className="transform-all fill-neutral-900 duration-500 group-hover:fill-yellow-600 dark:fill-neutral-100" />
         </a>
@@ -43,6 +44,7 @@ function Contact() {
           href="https://github.com/LaythAlqadhi"
           target="_blank"
           aria-label="GitHub"
+          rel="noreferrer"
         >
           <GithubIcon className="transform-all fill-neutral-900 duration-500 group-hover:fill-yellow-600 dark:fill-neutral-100" />
         </a>
