@@ -1,8 +1,8 @@
 import React from 'react';
 import Project from './Project';
-import odinbookImg from '../assets/odinbook.jpeg';
-import messagingAppImg from '../assets/messaging-app.jpeg';
-import whereIsWaldoImg from '../assets/where-is-waldo.jpeg';
+import odinbookImg from '../assets/odinbook.png';
+import messagingAppImg from '../assets/messaging-app.png';
+import whereIsWaldoImg from '../assets/where-is-waldo.png';
 
 function Projects() {
   return (
